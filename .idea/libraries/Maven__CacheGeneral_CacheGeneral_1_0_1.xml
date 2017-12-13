@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: CacheGeneral:CacheGeneral:1.0.1">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/CacheGeneral/CacheGeneral/1.0.1/CacheGeneral-1.0.1.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/CacheGeneral/CacheGeneral/1.0.1/CacheGeneral-1.0.1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/CacheGeneral/CacheGeneral/1.0.1/CacheGeneral-1.0.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

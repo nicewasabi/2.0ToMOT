@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.hyxt:DubboApi:1.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/hyxt/DubboApi/1.0-SNAPSHOT/DubboApi-1.0-20171115.004923-1.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/hyxt/DubboApi/1.0-SNAPSHOT/DubboApi-1.0-20171115.004923-1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/hyxt/DubboApi/1.0-SNAPSHOT/DubboApi-1.0-20171115.004923-1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
