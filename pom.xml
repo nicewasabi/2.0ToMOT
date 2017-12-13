@@ -66,6 +66,11 @@
             <artifactId>commons-compress</artifactId>
             <version>1.15</version>
         </dependency>
+        <dependency>
+            <groupId>commons-dbutils</groupId>
+            <artifactId>commons-dbutils</artifactId>
+            <version>1.6</version>
+        </dependency>
 
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>

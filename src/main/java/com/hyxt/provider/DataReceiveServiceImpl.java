@@ -16,6 +16,8 @@ import com.hyxt.utils.RedisPoolUtil;
 public class DataReceiveServiceImpl implements IDataReceiveService {
     @Override
     public String open(int port) {
+        //调用链路管理接口创建主链路服务端（还未提供接口，暂时空缺）
+        //
         return null;
     }
 

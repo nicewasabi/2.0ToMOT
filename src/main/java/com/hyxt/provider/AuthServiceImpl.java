@@ -18,13 +18,13 @@ public class AuthServiceImpl implements IAuthService {
 
     @Override
     public String connectMOT(String ip, String port) {
-
+        //调用链路管理接口创建与交通部链路客户端（还未提供接口，暂时空缺）
         return null;
     }
 
     @Override
     public String connectVMS(String ip, String port) {
-
+        //调用链路管理接口创建从链路客户端（还未提供接口，暂时空缺）
         return null;
     }
 
