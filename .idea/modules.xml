@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/AuthAPI/AuthAPI.iml" filepath="$PROJECT_DIR$/AuthAPI/AuthAPI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DataReceievAPI/DataReceievAPI.iml" filepath="$PROJECT_DIR$/DataReceievAPI/DataReceievAPI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DataTransferAPI/DataTransferAPI.iml" filepath="$PROJECT_DIR$/DataTransferAPI/DataTransferAPI.iml" />
       <module fileurl="file://$PROJECT_DIR$/VMSConnectMOT.iml" filepath="$PROJECT_DIR$/VMSConnectMOT.iml" />
     </modules>
   </component>
