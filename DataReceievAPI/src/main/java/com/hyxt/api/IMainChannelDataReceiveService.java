@@ -7,7 +7,7 @@ package com.hyxt.api;
  * @Date: Create in 11:19 2017/12/12
  * @Modifide By:
  **/
-public interface IDataReceiveService {
+public interface IMainChannelDataReceiveService {
 
     /**
      * 开启主链路监听端口

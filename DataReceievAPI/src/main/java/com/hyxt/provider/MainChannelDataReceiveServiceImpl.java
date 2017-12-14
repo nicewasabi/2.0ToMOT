@@ -2,7 +2,7 @@ package com.hyxt.provider;
 
 import com.alibaba.dubbo.config.annotation.Service;
 import com.hyxt.DTO.handler.MainLinkHandler;
-import com.hyxt.api.IDataReceiveService;
+import com.hyxt.api.IMainChannelDataReceiveService;
 import com.hyxt.utils.RedisPoolUtil;
 
 /**
@@ -12,8 +12,8 @@ import com.hyxt.utils.RedisPoolUtil;
  * @Date: Create in 18:43 2017/12/12
  * @Modifide By:
  **/
-@Service(interfaceClass=IDataReceiveService.class)
-public class DataReceiveServiceImpl implements IDataReceiveService {
+@Service(interfaceClass=IMainChannelDataReceiveService.class)
+public class MainChannelDataReceiveServiceImpl implements IMainChannelDataReceiveService {
 
     /**
      * 开启主链路监听端口
