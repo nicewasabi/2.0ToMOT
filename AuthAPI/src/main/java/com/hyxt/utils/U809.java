@@ -2,11 +2,8 @@ package com.hyxt.utils;
 
 import cn.com.cnpc.vms.common.util.BytesUtil;
 import cn.com.cnpc.vms.protocols.tcp.T809.util.T809_Util;
-import com.hyxt.DO.pojo.PlatInfo;
 
 public class U809 {
-
-	private static Dao dao = new Dao();
 
 	public static byte[] changeCode(byte[] command, int code) {
 		byte[] MSG_GNSSCENTERID = BytesUtil.int2bytes4(code);
@@ -29,39 +26,6 @@ public class U809 {
 		return command;
 	}
 
-	public static byte[] create1001(int id) {
-		byte[] bytes = BytesUtil.toStringHex("5b00000048000000011"
-				+ "001034fb5e3010000000000000000bc614e31323334353637383230322e39362e34322e31313000000000000000000000000000"
-				+ "00000000000022b702165d");
-		
-		PlatInfo info =null;
-		try{
-		info = dao.getPlatById(id + "");
-		}catch(Exception e){
-			e.printStackTrace();
-		}
-		if(info == null)
-			return null;
-		byte[] userid = BytesUtil.int2bytes4(info.getUserid());
-		byte[] pass = BytesUtil.writeStrToAppoint(info.getPassword(), 8);
-//		byte[] ip = BytesUtil.writeStrToAppoint("219.143.235.110", 32);
-		
-		byte[] ip = BytesUtil.writeStrToAppoint(TransferConnection.ip_1001, 32);
-	//	byte[] ip = BytesUtil.writeStrToAppoint("111.205.202.82", 32);
-		byte[] port = BytesUtil.int2bytes2(TransferConnection.port_1001);
-		bytes[23] = userid[3];
-		bytes[24] = userid[2];
-		bytes[25] = userid[1];
-		bytes[26] = userid[0];
-		System.arraycopy(pass, 0, bytes, 27, pass.length);
-		System.arraycopy(ip, 0, bytes, 35, ip.length);
-		bytes[67] = port[0];
-		bytes[68] = port[1];
-		bytes = U809.changeCode(bytes, Integer.valueOf(info.getCenterid()));
-		bytes = U809.es(bytes);
-		
-		return bytes;
-	}
 
 	public static byte[] changeSN(byte[] escape_msg, int responseSn) {
 		byte[] sn = BytesUtil.int2bytes4(responseSn);

@@ -1,5 +1,7 @@
 package com.hyxt.api;
 
+import com.alibaba.fastjson.JSONObject;
+
 /**
  * @author songm
  * @version v1.0
@@ -12,8 +14,9 @@ public interface IDataTransferService {
     /**
      * 监听与交通部连接的通道
      * @param channelName 通道名称
+     * @param params 下发消息参数（接入码，平台id，主、从、转发链路通道。。。）
      * @return
      */
-    public Boolean listen(String channelName);
+    public Boolean listen(String channelName, JSONObject params);
 
 }

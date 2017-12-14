@@ -5,7 +5,6 @@ import cn.com.cnpc.vms.common.util.BytesUtil;
 import com.hyxt.DTO.protocol.JTBZFHeader;
 import com.hyxt.DTO.protocol.ProtocolUtil;
 import com.hyxt.utils.IRedisMessageListener;
-import com.hyxt.utils.MessageConstant;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
@@ -69,7 +68,7 @@ public class TransferLinkHandler extends IRedisMessageListener{
                         timer.schedule(new TimerTask() {
                             @Override
                             public void run() {
-                                byte[] beatMsg = MessageConstant.transferLinkHeartBeat();
+                                byte[] beatMsg = ProtocolUtil.getMessageByBody((byte) 0x01, null);
                                 // 然后启动心跳，与交通部的心跳（暂未提供发消息接口）
 
                             }

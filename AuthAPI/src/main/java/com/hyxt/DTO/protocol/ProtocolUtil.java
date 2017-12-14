@@ -4,7 +4,6 @@ import com.hyxt.DTO.protocol.JTBZF_0x82.DataIterm;
 import cn.com.cnpc.vms.common.exception.ProtocolEscapeExeption;
 import cn.com.cnpc.vms.common.util.ByteUtil;
 import cn.com.cnpc.vms.common.util.BytesUtil;
-import com.hyxt.utils.AreaUtil;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 

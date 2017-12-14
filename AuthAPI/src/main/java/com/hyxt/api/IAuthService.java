@@ -34,10 +34,9 @@ public interface IAuthService {
     /**
      * 监听与交通部链路的通道
      * @param channelName 通道名称
-     * @param platInfo 平台信息（接入码，平台id。。。）
      * @return
      */
-    public Boolean listenTransferLink(String channelName, JSONObject platInfo);
+    public Boolean listenTransferLink(String channelName);
     /**
      * 监听与2.0从链路的通道
      * @param channelName 通道名称

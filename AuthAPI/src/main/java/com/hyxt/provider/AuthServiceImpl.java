@@ -11,7 +11,7 @@ import java.util.Map;
 /**
  * @author songm
  * @version v1.0
- * @Description
+ * @Description 认证接口API实现类
  * @Date: Create in 18:41 2017/12/12
  * @Modifide By:
  **/
@@ -25,21 +25,11 @@ public class AuthServiceImpl implements IAuthService {
         return null;
     }
 
-    /*@Override
-    public String connectVMS(String platId, String ip, String port) {
-        //调用链路管理接口创建从链路客户端（还未提供接口，暂时空缺）
-        return null;
-    }*/
 
     @Override
-    public Boolean listenTransferLink(String channelName,JSONObject platInfo) {
+    public Boolean listenTransferLink(String channelName) {
         RedisPoolUtil.getJedis().subscribe(new TransferLinkHandler(),channelName);
         return true;
     }
 
-    /*@Override
-    public Boolean listenSlaveLink(String channelName) {
-        RedisPoolUtil.getJedis().subscribe(new SlaveLinkHandler(map),channelName);
-        return true;
-    }*/
 }
