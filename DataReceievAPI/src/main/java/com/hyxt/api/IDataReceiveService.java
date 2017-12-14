@@ -10,18 +10,22 @@ package com.hyxt.api;
 public interface IDataReceiveService {
 
     /**
-     * 创建主链路服务端
-     * @param platId 平台ID
+     * 开启主链路监听端口
+     *
      * @param port 端口号
      * @return 开启成功返回通道名称，否则返回错误编号
      */
-    public String open(String platId, int port);
+    //TODO 调用链路管理的API
+    public String openLocalPort(int port);
+
 
     /**
-     * 监听创建的通道
-     * @param channelName 通道名称
-     * @return
+     *
+     * @param channelName 监听到的消息往哪个channel放，可能是2.0到转发平台的channel，也可能是转发到交通部的channel
      */
-    public Boolean listen(String channelName);
+
+    public void  handleMessage(String channelName);
+
+
 
 }

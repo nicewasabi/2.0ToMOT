@@ -14,16 +14,26 @@ import com.hyxt.utils.RedisPoolUtil;
  **/
 @Service(interfaceClass=IDataReceiveService.class)
 public class DataReceiveServiceImpl implements IDataReceiveService {
+
+    /**
+     * 开启主链路监听端口
+     *
+     * @param port 端口号
+     * @return 开启成功返回通道名称，否则返回错误编号
+     */
     @Override
-    public String open(String platId, int port) {
-        //调用链路管理接口创建主链路服务端（还未提供接口，暂时空缺）
-        //
+    public String openLocalPort(int port) {
         return null;
     }
 
+    /**
+     * @param channelName 监听到的消息往哪个channel放，可能是2.0到转发平台的channel，也可能是转发到交通部的channel
+     */
     @Override
-    public Boolean listen(String channelName) {
-        RedisPoolUtil.getJedis().subscribe(new MainLinkHandler(map),channelName);
-        return true;
+    public void handleMessage(String channelName) {
+
+        RedisPoolUtil.getJedis().subscribe(new MainLinkHandler(),channelName);
+
+
     }
 }
