@@ -123,7 +123,7 @@ public class Dao {
 		QueryRunner qr = QueryUitl.getQueryRunner();
 		try {
 			System.out.println("开始");
-			list = qr.query(sql, new BeanListHandler(VehiclePlat.class), param);
+			list = (List<VehiclePlat>) qr.query(sql, new BeanListHandler(VehiclePlat.class), param);
 			Map<String, Vehicle> map = new TreeMap<String, Vehicle>();
 			for (VehiclePlat vp : list) {
 				if (!map.containsKey(vp.getId_number())) {
@@ -171,7 +171,7 @@ public class Dao {
 		Object[] param = { id };
 		QueryRunner qr = QueryUitl.getQueryRunner();
 		try {
-			list = qr.query(sql, new BeanListHandler(SuperiorPlatInfo.class), param);
+			list = (List<SuperiorPlatInfo>) qr.query(sql, new BeanListHandler(SuperiorPlatInfo.class), param);
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
@@ -294,7 +294,7 @@ public class Dao {
 		QueryRunner qr = QueryUitl.getQueryRunner();
 		try {
 			System.out.println("开始");
-			list = qr.query(sql, new BeanListHandler(VehiclePlat.class), param);
+			list = (List<VehiclePlat>) qr.query(sql, new BeanListHandler(VehiclePlat.class), param);
 			Map<String, Vehicle> map = new TreeMap<String, Vehicle>();
 			for (VehiclePlat vp : list) {
 				if (!map.containsKey(vp.getId_number())) {
@@ -468,8 +468,7 @@ public class Dao {
 	}
 
 	// 更新JTB_plat_vehicle表
-	public void updateJTB_plat_vehicle(HashSet<Integer> set) {
-		String authCode = TransferConnection.authCode;
+	public void updateJTB_plat_vehicle(HashSet<Integer> set,String authCode) {
 		String sql = "merge into jtb_plat_vehicle using (select v.vehicle_id as vid "
 					+"from v_vehicleinfo v ,p_department pd , p_department_up pdu "
 					+"where v.org_code like pd.org_code||'%' "
@@ -487,8 +486,7 @@ public class Dao {
 		}
 	}
 
-	public void cleanJTB_plat_vehicle() {
-		String authCode = TransferConnection.authCode;
+	public void cleanJTB_plat_vehicle(String authCode) {
 		String sql = "delete from jtb_plat_vehicle where pid = "+authCode;
 		QueryRunner qr = QueryUitl.getQueryRunner();
 		try {

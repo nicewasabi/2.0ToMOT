@@ -217,7 +217,7 @@ public class TransferLinkHandler extends IRedisMessageListener{
 
         body_0x03.setUid(Integer.valueOf(id));
         body_0x03.setBusiness(BytesUtil.int2bytes2(0x1001));
-        byte[] data = U809.create1001(Integer.valueOf(id));
+        byte[] data = U809.create1001(Integer.valueOf(id),String.valueOf(config.get("ip_1001")),Integer.parseInt(String.valueOf(config.get("port_1001"))));
         if (data == null)
             return;
         body_0x03.setBytes_809(data);

@@ -1,10 +1,8 @@
 package com.hyxt.utils;
 
-import cn.com.cnpc.outer.db.Dao;
-import cn.com.cnpc.outer.main.TransferConnection;
-import cn.com.cnpc.outer.pojo.PlatInfo;
 import cn.com.cnpc.vms.common.util.BytesUtil;
 import cn.com.cnpc.vms.protocols.tcp.T809.util.T809_Util;
+import com.hyxt.DO.pojo.PlatInfo;
 
 public class U809 {
 
@@ -31,7 +29,7 @@ public class U809 {
 		return command;
 	}
 
-	public static byte[] create1001(int id) {
+	public static byte[] create1001(int id,String ip_1001,int port_1001) {
 		byte[] bytes = BytesUtil.toStringHex("5b00000048000000011"
 				+ "001034fb5e3010000000000000000bc614e31323334353637383230322e39362e34322e31313000000000000000000000000000"
 				+ "00000000000022b702165d");
@@ -48,9 +46,9 @@ public class U809 {
 		byte[] pass = BytesUtil.writeStrToAppoint(info.getPassword(), 8);
 //		byte[] ip = BytesUtil.writeStrToAppoint("219.143.235.110", 32);
 		
-		byte[] ip = BytesUtil.writeStrToAppoint(TransferConnection.ip_1001, 32);
+		byte[] ip = BytesUtil.writeStrToAppoint(ip_1001, 32);
 	//	byte[] ip = BytesUtil.writeStrToAppoint("111.205.202.82", 32);
-		byte[] port = BytesUtil.int2bytes2(TransferConnection.port_1001);
+		byte[] port = BytesUtil.int2bytes2(port_1001);
 		bytes[23] = userid[3];
 		bytes[24] = userid[2];
 		bytes[25] = userid[1];
