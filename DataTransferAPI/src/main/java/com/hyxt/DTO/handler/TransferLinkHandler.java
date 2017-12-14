@@ -36,9 +36,9 @@ public class TransferLinkHandler extends IRedisMessageListener{
     });
 
     // 记录流水号 流水号:消息
-    LocalCache reqCache = LocalCacheManager.getCache("_809seq");
+    //LocalCache reqCache = LocalCacheManager.getCache("_809seq");
     // 平台链路信息 平台id:信息
-    public static LocalCache plateChannelInfoCache = LocalCacheManager.getCache("_plateChannelInfo");
+    //public static LocalCache plateChannelInfoCache = LocalCacheManager.getCache("_plateChannelInfo");
     // <接入码,平台ID>
     public static LocalCache accessCodeToBusinessCache = LocalCacheManager.getCache("_accessCodeToBusiness");
 
