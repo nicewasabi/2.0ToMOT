@@ -1,5 +1,9 @@
 package com.hyxt.api;
 
+import com.alibaba.fastjson.JSONObject;
+
+import java.util.Map;
+
 /**
  * @author songm
  * @version v1.0
@@ -25,18 +29,19 @@ public interface IAuthService {
      * @param port 连接的端口
      * @return 如果创建连接成功返回通道名称，否则返回错误编号
      */
-    public String connectVMS(String platId, String ip, String port);
+    //public String connectVMS(String platId, String ip, String port);
 
     /**
      * 监听与交通部链路的通道
      * @param channelName 通道名称
+     * @param platInfo 平台信息（接入码，平台id。。。）
      * @return
      */
-    public Boolean listenTransferLink(String channelName);
+    public Boolean listenTransferLink(String channelName, JSONObject platInfo);
     /**
      * 监听与2.0从链路的通道
      * @param channelName 通道名称
      * @return
      */
-    public Boolean listenSlaveLink(String channelName);
+    //public Boolean listenSlaveLink(String channelName);
 }

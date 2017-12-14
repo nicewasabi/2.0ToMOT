@@ -1,10 +1,12 @@
 package com.hyxt.provider;
 
 import com.alibaba.dubbo.config.annotation.Service;
-import com.hyxt.DTO.handler.SlaveLinkHandler;
+import com.alibaba.fastjson.JSONObject;
 import com.hyxt.DTO.handler.TransferLinkHandler;
 import com.hyxt.api.IAuthService;
 import com.hyxt.utils.RedisPoolUtil;
+
+import java.util.Map;
 
 /**
  * @author songm
@@ -23,21 +25,21 @@ public class AuthServiceImpl implements IAuthService {
         return null;
     }
 
-    @Override
+    /*@Override
     public String connectVMS(String platId, String ip, String port) {
         //调用链路管理接口创建从链路客户端（还未提供接口，暂时空缺）
         return null;
-    }
+    }*/
 
     @Override
-    public Boolean listenTransferLink(String channelName) {
-        RedisPoolUtil.getJedis().subscribe(new TransferLinkHandler(map),channelName);
+    public Boolean listenTransferLink(String channelName,JSONObject platInfo) {
+        RedisPoolUtil.getJedis().subscribe(new TransferLinkHandler(),channelName);
         return true;
     }
 
-    @Override
+    /*@Override
     public Boolean listenSlaveLink(String channelName) {
         RedisPoolUtil.getJedis().subscribe(new SlaveLinkHandler(map),channelName);
         return true;
-    }
+    }*/
 }

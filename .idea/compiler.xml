@@ -6,11 +6,16 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="VMSConnectMOT" />
+        <module name="AuthAPI" />
+        <module name="DataReceievAPI" />
+        <module name="DataTransferAPI" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="VMSConnectMOT" target="1.7" />
+      <module name="AuthAPI" target="1.7" />
+      <module name="DataReceievAPI" target="1.7" />
+      <module name="DataTransferAPI" target="1.7" />
+      <module name="VMSConnectMOT" target="1.6" />
     </bytecodeTargetLevel>
   </component>
 </project>

@@ -1,10 +1,8 @@
 package com.hyxt.utils;
 
-import cn.com.cnpc.outer.db.Dao;
-import cn.com.cnpc.outer.main.TransferConnection;
-import cn.com.cnpc.outer.pojo.PlatInfo;
 import cn.com.cnpc.vms.common.util.BytesUtil;
 import cn.com.cnpc.vms.protocols.tcp.T809.util.T809_Util;
+import com.hyxt.DO.pojo.PlatInfo;
 
 public class U809 {
 
