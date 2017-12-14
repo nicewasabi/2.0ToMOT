@@ -2,7 +2,6 @@ package com.hyxt.DTO.handler;
 
 import cn.com.cnpc.vms.common.cache.LocalCache;
 import cn.com.cnpc.vms.common.cache.LocalCacheManager;
-import cn.com.cnpc.vms.common.exception.ProtocolEscapeExeption;
 import cn.com.cnpc.vms.common.util.BytesUtil;
 import cn.com.cnpc.vms.protocols.tcp.T809.T809_MessageHeader;
 import cn.com.cnpc.vms.protocols.tcp.T809.util.T809_Util;
@@ -103,7 +102,7 @@ public class SlaveLinkHandler extends IRedisMessageListener {
                 default:
                     break;
             }
-        } catch (ProtocolEscapeExeption protocolEscapeExeption) {
+        } catch (Exception protocolEscapeExeption) {
             protocolEscapeExeption.printStackTrace();
         }
     }
